@@ -81,7 +81,16 @@ class AdsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def find
+    @search = Ad.find_all_by_description(params[:search_string])
+    # if ad.description = params[:search_string]
+      puts @search
+    # end
+  end
+
 end
+
 
 
 private

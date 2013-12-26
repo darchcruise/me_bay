@@ -1,0 +1,13 @@
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+</tr>
+
+<% @search.each do |x| %>
+<tr>
+  <td><%= x.name %></td>
+  <td><%= x.description %></td>
+</tr>
+<% end %>
+</table>
