@@ -6,9 +6,7 @@
     <th>Name</th>
     <th>Description</th>
     <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Category</th>
   </tr>
 
 <% @ads.each do |ad| %>
@@ -16,6 +14,7 @@
     <td><%= ad.name %></td>
     <td><%= ad.description %></td>
     <td><%= ad.price %></td>
+    <td><%= ad.category %></td>
     <td><%= link_to 'Show', ad %></td>
     <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
     <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
