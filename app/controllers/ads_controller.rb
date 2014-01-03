@@ -83,8 +83,11 @@ class AdsController < ApplicationController
   end
 
   def find
-    @search = Ad.find_all_by_category(params[:search_string])
-      puts @search
+    # @search = Ad.find_all_by_category(params[:search_string])
+    #   puts @search
+    # @search = Ad.find(:all, :conditions=>["category = ? OR description = ?", params[:search_string], params[:search_string]])
+    @search = Ad.find(:all, :conditions=>["price > ?", params[:search_string]])
+
 
   end
 
